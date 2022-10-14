@@ -1,0 +1,63 @@
+*{
+    overflow: hidden;
+}
+
+.banner{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 90vh;
+}
+.info-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 90px;
+}
+.img-banner{
+    padding-right: 50px;
+}
+.info-banner h1{
+   font-size: 70px;
+   font-weight: 800;
+   line-height: 120%;
+}
+.btn-register{
+    background-color: black;
+    color: white;
+}
+.btn-app{
+    display: flex;
+    margin: 30px 0px;
+    gap: 15px;
+}
+
+.conters{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    margin-top: 30px;
+}
+
+.conters .mini-car{
+    
+}
+
+.conters .mini-car1 h4{
+   font-size: 28px;
+   font-weight: 700;
+   color: #F0C932;
+}
+.conters .mini-car2 h4{
+    font-size: 28px;
+    font-weight: 700;
+    color: #FE753F;
+ }
+ .conters .mini-car3 h4{
+    font-size: 28px;
+    font-weight: 700;
+    color: #2489D3;
+ }
+
+.conters .mini-car1 h5,.mini-car2 h5 , .mini-car3 h5{
+    font-size: 14px;
+    width: 100px;
+ }

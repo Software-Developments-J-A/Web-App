@@ -1,0 +1,21 @@
+*{
+    overflow: hidden;
+}
+.login-section{
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 50% 50%;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+    justify-content: center;
+}
+.login-form h1{
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 120%;
+    width: 500px;
+}

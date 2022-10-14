@@ -1,0 +1,28 @@
+.main-menu{    
+    display: flex;
+    justify-content:space-between;
+    background-color: transparent;
+    padding: 0px 65px;
+    padding-top: 50px;
+    height: 10vh;
+}
+  
+.logo{
+    width: 140px;
+    padding-top: 15px;
+}
+.menu{
+    display: flex;
+    gap: 15px;
+}
+.btn-app{
+    display: flex;
+    gap: 15px;
+}
+
+
+
+.btn-register{
+    background-color: black;
+    color: white;
+}
