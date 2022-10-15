@@ -1,0 +1,19 @@
+.contenedor{
+ display: flex;
+ flex-direction: row;
+ justify-content: end;
+ height: 80px;
+ background-color:#fafafa;
+}
+
+.perfil-btn{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.perfil-btn h3{
+    margin: 0px;
+}

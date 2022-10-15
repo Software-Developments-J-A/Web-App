@@ -1,0 +1,36 @@
+.contenedor{
+    padding: 30px 30px 30px 50px;
+}
+
+.tasks{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box{
+    width: 250px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 17px;
+    align-items: center;
+    box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.104);
+}
+.box:first-child{
+    background-color:  #FFCD4E;
+}
+
+.box h3{
+    font-size: 20px;
+}
+
+.box button{
+    font-size: 20px;
+    color: black;
+    background: #FFCD4E;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 28px;
+}

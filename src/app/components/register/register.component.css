@@ -10,7 +10,7 @@
 .login-form{
     display: flex;
     flex-direction: column;
-    padding-left: 80px;
+    padding-left: 150px;
     justify-content: center;
 }
 .login-form h1{
@@ -18,4 +18,9 @@
     font-weight: 800;
     line-height: 120%;
     width: 480px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
 }
