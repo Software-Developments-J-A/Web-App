@@ -1,8 +1,8 @@
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './components/shared/angular-material/angular-material.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,15 +13,16 @@ import { RegisterComponent } from './components/register/register.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { PanelComponent } from './components/panel/panel.component';
 import { BodyComponent } from './components/body/body.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BodyHeaderComponent } from './components/body-header/body-header.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsComponent } from './components/settings/settings.component';
 
+
 @NgModule({
+
   declarations: [
     AppComponent,
     HomeComponent,
@@ -30,13 +31,13 @@ import { SettingsComponent } from './components/settings/settings.component';
     RegisterComponent,
     ListProductComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
     PanelComponent,
     BodyComponent,
-    SidenavComponent,
     BodyHeaderComponent,
+    SidenavComponent,
     DashboardComponent,
-    SettingsComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

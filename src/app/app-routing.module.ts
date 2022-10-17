@@ -15,9 +15,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  {path:'products',component:ListProductComponent},
-  {path:'product/new',component:AddProductComponent},
-  {path:'product/edit/:id',component:EditProductComponent},
+  { path:'products',component:ListProductComponent},
+  { path:'product/new',component:AddProductComponent},
+  { path:'product/edit/:id',component:EditProductComponent},
   { path: 'panel', component:PanelComponent ,
       children:[
         { path: '', redirectTo:'dashboard', pathMatch: 'full' },
