@@ -1,0 +1,25 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "title": "Clavo",
+      "brand": "PRODAC",
+      "summary": "Clavos de acero albañil 2 1/2x10 1Kg",
+      "price": 7.9
+    },
+    {
+      "id": 2,
+      "title": "Clavo",
+      "brand": "FIXSER",
+      "summary": "Clavo acero 2.5x38mm 10und",
+      "price": 4.9
+    },
+    {
+      "id": 3,
+      "title": "Clavo",
+      "brand": "UBERMANN",
+      "summary": "Clavos 30mm 1000und",
+      "price": "14.8"
+    }
+  ]
+}
