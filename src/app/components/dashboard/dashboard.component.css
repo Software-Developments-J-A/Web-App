@@ -1,5 +1,6 @@
 .contenedor{
-    padding: 30px 30px 30px 50px;
+    padding: 30px;
+    background-color: #FCFCFC;
 }
 
 .tasks{
@@ -8,6 +9,7 @@
 }
 
 .box{
+    background: white;
     width: 250px;
     height: 290px;
     display: flex;
@@ -16,7 +18,8 @@
     justify-content: center;
     border-radius: 17px;
     align-items: center;
-    box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.104);
+    box-shadow: 0px 1px 25px rgba(58, 58, 58, 0.086);
+    gap: 20px;
 }
 .box:first-child{
     background-color:  #FFCD4E;
@@ -34,3 +37,27 @@
     padding: 12px 25px;
     border-radius: 28px;
 }
+
+
+.shop-basic-info{
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFCD4E;
+    border-radius: 17px;
+    padding: 17px 0px;
+    align-content: center;
+    margin-top: 40px;
+    box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.086);
+
+}
+
+.shop-basic-info h3{
+   margin: 0;
+}
+
+.shop-basic-info button{
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 16px;
+ }

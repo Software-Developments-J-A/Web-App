@@ -4,7 +4,7 @@ export interface User {
     password:string;
     names?: string;
     lastnames?: string;
-    namebusiness?: string;
+    businessid?: string;
     phone: string;
   
 }

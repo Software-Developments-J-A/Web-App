@@ -1,3 +1,5 @@
+
+import { SettingsComponent } from './components/settings/settings.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { LoginComponent } from './components/login/login.component';
@@ -15,7 +17,7 @@ const routes: Routes = [
       children:[
         { path: '', redirectTo:'dashboard', pathMatch: 'full' },
         { path: 'dashboard', component:DashboardComponent },
-
+        { path: 'settings', component:SettingsComponent },
     ]
   }
 ];

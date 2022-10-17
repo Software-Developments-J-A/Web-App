@@ -26,7 +26,7 @@ export const navbarData=[
         label:'Mensajes'
     },
     {
-        routeLink:'configs',
+        routeLink:'settings',
         icon:'settings',
         label:'Configuraciones'
     }

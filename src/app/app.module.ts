@@ -15,6 +15,7 @@ import { BodyComponent } from './components/body/body.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BodyHeaderComponent } from './components/body-header/body-header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     SidenavComponent,
     BodyHeaderComponent,
     DashboardComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
