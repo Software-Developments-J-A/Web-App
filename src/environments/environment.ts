@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+<<<<<<< Updated upstream
   production: false
+=======
+  production: false,
+  basePath:'http://localhost:3000/Products',
+  basePathuser:'http://localhost:3000/Users',
+
+>>>>>>> Stashed changes
 };
 
 /*

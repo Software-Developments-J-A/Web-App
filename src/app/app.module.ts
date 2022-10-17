@@ -9,6 +9,16 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+<<<<<<< Updated upstream
+=======
+import { ListProductComponent } from './components/list-product/list-product.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddUserComponent } from './components/add-user/add-user.component';
+
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -16,7 +26,15 @@ import { RegisterComponent } from './components/register/register.component';
     HomeComponent,
     NavbarComponent,
     LoginComponent,
+<<<<<<< Updated upstream
     RegisterComponent
+=======
+    RegisterComponent,
+    ListProductComponent,
+    AddProductComponent,
+    EditProductComponent,
+    AddUserComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
