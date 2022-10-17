@@ -1,6 +1,9 @@
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PanelComponent } from './components/panel/panel.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
@@ -15,7 +18,13 @@ const routes: Routes = [
   {path:'products',component:ListProductComponent},
   {path:'product/new',component:AddProductComponent},
   {path:'product/edit/:id',component:EditProductComponent},
-
+  { path: 'panel', component:PanelComponent ,
+      children:[
+        { path: '', redirectTo:'dashboard', pathMatch: 'full' },
+        { path: 'dashboard', component:DashboardComponent },
+        { path: 'settings', component:SettingsComponent },
+    ]
+  }
 ];
 
 @NgModule({
