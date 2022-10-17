@@ -10,6 +10,10 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ListProductComponent } from './components/list-product/list-product.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { PanelComponent } from './components/panel/panel.component';
 import { BodyComponent } from './components/body/body.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
@@ -24,6 +28,9 @@ import { SettingsComponent } from './components/settings/settings.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
+    ListProductComponent,
+    AddProductComponent,
+    EditProductComponent
     PanelComponent,
     BodyComponent,
     SidenavComponent,
@@ -36,7 +43,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

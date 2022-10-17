@@ -1,4 +1,6 @@
-
+import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { ListProductComponent } from './components/list-product/list-product.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PanelComponent } from './components/panel/panel.component';
@@ -13,6 +15,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  {path:'products',component:ListProductComponent},
+  {path:'product/new',component:AddProductComponent},
+  {path:'product/edit/:id',component:EditProductComponent},
   { path: 'panel', component:PanelComponent ,
       children:[
         { path: '', redirectTo:'dashboard', pathMatch: 'full' },
