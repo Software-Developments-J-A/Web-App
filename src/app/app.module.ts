@@ -30,7 +30,7 @@ import { SettingsComponent } from './components/settings/settings.component';
     RegisterComponent,
     ListProductComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
     PanelComponent,
     BodyComponent,
     SidenavComponent,
