@@ -19,3 +19,8 @@
     line-height: 120%;
     width: 500px;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
