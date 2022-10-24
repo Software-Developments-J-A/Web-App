@@ -11,7 +11,7 @@ export const navbarData=[
         label:'Pedidos'
     },
     {
-        routeLink:'products',
+        routeLink:'misproductos',
         icon:'person',
         label:'Mis Productos'
     },

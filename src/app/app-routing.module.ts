@@ -23,6 +23,7 @@ const routes: Routes = [
         { path: '', redirectTo:'dashboard', pathMatch: 'full' },
         { path: 'dashboard', component:DashboardComponent },
         { path: 'settings', component:SettingsComponent },
+        { path: 'misproductos', component:ListProductComponent }
     ]
   }
 ];

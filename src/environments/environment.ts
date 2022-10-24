@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  basePath:'http://localhost:3000/Products',
+  basePath:'http://localhost:8080/products',
   basePathUser:'http://localhost:3000/users',
 };
 

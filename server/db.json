@@ -29,7 +29,6 @@
       "price": "aaa"
     }
   ],
-  
   "users": [
     {
       "id": 1,
@@ -40,6 +39,12 @@
       "id": 2,
       "email": "jh@gmail.com",
       "password": "Hola159@@"
+    },
+    {
+      "id": 3,
+      "email": "alrex69@hotmail.com",
+      "password": "cano68914",
+      "phone": "955369258"
     }
   ]
 }
