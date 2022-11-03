@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -22,15 +23,9 @@ export class UserService {
     return this.http.get<User>(`${this.basePath}/${id}`)
   }
   
-  getIdActaulUser():number{
-    return this.idActualUser
-  }
-  setActualIde(id:any):void{
-    this.idActualUser=id;
-  }
-  addUser(user: User) {
+  addUser(user: User):Observable<Object> {
     return this.http.post<User>(
-      this.basePath,
+      `${this.basePath}`,
       user
     );
   }

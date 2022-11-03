@@ -38,12 +38,12 @@ export class LoginComponent implements OnInit {
 
 
   login(){
-    this.http.get<any>(this.basePath)
+   
+    
+    this.http.get<User[]>(`${this.basePath}`)
     .subscribe(res=>{
-      const user=res.find((a:any)=>{
-        
-        if(a.email===this.loginForm.value.email && a.password === this.loginForm.value.password){
-          this.userService.setActualIde(a.id);
+      const user=res.find((a:User)=>{
+          if(a.email === this.loginForm.value.email && a.password === this.loginForm.value.password){
           this.auth=true;
         }
         return this.auth
@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
           duration: 3000,
         });
         this.loginForm.reset();
-        this.router.navigate(['/panel']);
+        this.router.navigate(['panel']);
       }else{
         this.snackBar.open('El usuario es Incorrecto', '', {
           duration: 3000,

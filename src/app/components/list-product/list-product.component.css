@@ -1,0 +1,46 @@
+.container {
+    padding: 30px;
+    background-color: #FCFCFC;
+    min-height: 70vh;
+}
+.header-accion{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 20px;
+}
+.header-accion button{
+   color: #006A0E;
+   background-color: #4fed64a0;
+   font-weight: 600;
+   padding: 15px 30px;
+   border-radius: 17px;
+   border: none;
+}
+
+table{
+    width: 100%;
+    border-radius: 17px;
+}
+
+.edit-button{
+    color: #006A0E;
+    background-color: #4fed64a0;
+    font-weight: 600;
+    padding: 8px 18px;
+    margin-right: 15px;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button{
+    color: #C80000;
+    background-color: #ff6a6085;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+
+}

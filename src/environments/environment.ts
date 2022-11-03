@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  basePath:'http://localhost:3000/Products',
-  basePathUser:'http://localhost:3000/users',
+  basePathProducts:'http://localhost:8080/api/business/1/products',
+  basePathUser:'http://localhost:8080/api/users',
 };
 
 /*
