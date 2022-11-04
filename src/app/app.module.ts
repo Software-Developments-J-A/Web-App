@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from './components/register/register/register.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
@@ -19,6 +19,8 @@ import { BodyHeaderComponent } from './components/body-header/body-header.compon
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { BusinessRegisterComponent } from './components/register/business-register/business-register.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { SettingsComponent } from './components/settings/settings.component';
     BodyHeaderComponent,
     SidenavComponent,
     DashboardComponent,
-    SettingsComponent
+    SettingsComponent,
+    ShopComponent,
+    BusinessRegisterComponent
   ],
   imports: [
     BrowserModule,

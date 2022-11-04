@@ -1,31 +1,31 @@
 <app-navbar></app-navbar>
 <section class="login-section">
     <div class="login-form">
-        <h1>Empieza con tu tiendaa hoy!</h1>
+        <h1 class="font1" >Empieza con tu tienda hoy!</h1>
 
         <form [formGroup]="myForm" class="formulario-inputs" autocomplete="off">
             <mat-form-field appearance="fill">
-                <mat-label>Email</mat-label>
+                <mat-label class="font1" >Email</mat-label>
                 <input matInput formControlName="email" />
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Telephone</mat-label>
+                <mat-label class="font1" >Telephone</mat-label>
                 <input type="tel" matInput formControlName="phone">
               </mat-form-field>
 
             <mat-form-field appearance="fill">
-                <mat-label>Contraseña</mat-label>
+                <mat-label class="font1" >Contraseña</mat-label>
                 <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
             </mat-form-field>
-            <button
+            <button class="font1"
               mat-button
               mat-raised-button
               style="background-color:#FFCD4E;
-                    color:black"
+                    color:black;padding-top: 13px; padding-bottom: 13px; font-size: 18px;"
               [disabled]="myForm.invalid"
               (click)="saveUser()">
               Registrarse
