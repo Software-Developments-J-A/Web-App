@@ -12,7 +12,7 @@ export class ListCategoryComponent implements OnInit {
 
   displayedColumns: string[] = [
     'id',
-    'title',
+    'name',
   ];
 
   dataSource = new MatTableDataSource<Category>();

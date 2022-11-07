@@ -1,5 +1,5 @@
-import { ProductService } from './../../services/product.service';
-import { Product } from './../../models/product';
+import { ProductService } from './../../../services/product.service';
+import { Product } from './../../../models/product';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 

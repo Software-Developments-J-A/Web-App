@@ -8,19 +8,21 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductService {
 
+  basePathlist:string= environment.basePathListProducts;
   basePath:string= environment.basePathProducts;
+
 
   constructor(private http:HttpClient) { }
 
   getProducts(){
-    return this.http.get<Product[]>(this.basePath);
+    return this.http.get<Product[]>(this.basePathlist);
   }
 
   getProductId(id: any) {
     return this.http.get<Product>(`${this.basePath}/${id}`);
   }
 
-  addProducts(product: Product) {
+  addProducts(product: any) {
     return this.http.post<Product>(this.basePath, product);
   }
 

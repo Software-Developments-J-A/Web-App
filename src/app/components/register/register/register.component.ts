@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
         this.snackBar.open('Ya falta poco', '', {
           duration: 3000,
         });
-        this.router.navigate(['/register-businesss']);
+        this.router.navigate(['/register-business']);
       },
       error: (err) => {
         console.log(err);
