@@ -1,0 +1,36 @@
+
+
+.login-section{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 50% 50%;
+}
+
+.img-login{
+    background-image: url(../../../../assets/img/register-business.png);
+    background-size: cover;
+
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    padding-left: 150px;
+    justify-content: center;
+}
+.login-form h1{
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 120%;
+    width: 480px;
+}
+
+.login-form img{
+    width: 150px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}

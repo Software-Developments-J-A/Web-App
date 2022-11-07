@@ -1,0 +1,31 @@
+<section class="login-section">
+    <div class="login-form">
+        <img src="../../../../assets/img/image.png" alt="">
+        <h1 class="font1" >Ya casi esta tu tienda</h1>
+
+        <form [formGroup]="myForm" class="formulario-inputs" autocomplete="off">
+            <h3 class="font1">Datos del Negocio</h3>
+            <mat-form-field appearance="fill">
+                <mat-label class="font1" >Nombre del Negocio</mat-label>
+                <input matInput formControlName="name" />
+            </mat-form-field>
+
+            <h3 class="font1">Datos del Dueño</h3>
+
+        
+
+            <button class="font1"
+              mat-button
+              mat-raised-button
+              style="background-color:#FFCD4E;
+                    color:black;padding-top: 13px; padding-bottom: 13px; font-size: 18px;"
+              [disabled]="myForm.invalid"
+              (click)="saveBusiness()">
+              Empezar
+            </button>
+          </form>
+    </div>
+    <div class="img-login">
+        <img src="" alt="">
+    </div>
+</section>

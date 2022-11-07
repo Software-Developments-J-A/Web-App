@@ -11,12 +11,22 @@ export class UserService {
 
   basePath:string=environment.basePathUser;
 
-  idActualUser!: number;
+  actualUser!:User;
+
 
   constructor(private http: HttpClient) { }
 
   getUser(){
     return this.http.get<User[]>(this.basePath)
+  }
+
+
+  setActualUser(user:any){
+    this.actualUser=user;
+  }
+
+  getActualUser(){
+    return this.actualUser;
   }
 
   getUserId(id:any){

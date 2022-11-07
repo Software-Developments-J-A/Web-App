@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
 
   hide = true;
   basePath:string=environment.basePathUser;
-  actualUser!: User;
   auth!: Boolean;
 
   public loginForm!: FormGroup;
@@ -45,6 +44,7 @@ export class LoginComponent implements OnInit {
       const user=res.find((a:User)=>{
           if(a.email === this.loginForm.value.email && a.password === this.loginForm.value.password){
           this.auth=true;
+          this.userService.setActualUser(a);
         }
         return this.auth
       });

@@ -45,10 +45,11 @@ export class RegisterComponent implements OnInit {
     };
     this.userService.addUser(user).subscribe({
       next: (data) => {
-        this.snackBar.open('El empleado fue registrado con exito!', '', {
+        this.userService.setActualUser(user);
+        this.snackBar.open('Ya falta poco', '', {
           duration: 3000,
         });
-        this.router.navigate(['/panel']);
+        this.router.navigate(['/register-businesss']);
       },
       error: (err) => {
         console.log(err);

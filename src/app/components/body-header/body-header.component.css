@@ -1,7 +1,7 @@
 .contenedor{
  display: flex;
  flex-direction: row;
- justify-content: end;
+ justify-content: flex-end;
  height: 12vh;
  background-color:#fafafa;
  border-bottom: 1px  solid black;
