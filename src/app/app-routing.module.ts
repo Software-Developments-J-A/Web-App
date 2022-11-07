@@ -1,3 +1,7 @@
+import { EditCategoryComponent } from './components/edit-category/edit-category.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
+import { ListCategoryComponent } from './components/list-category/list-category.component';
+import { Category } from './models/category';
 import { BusinessRegisterComponent } from './components/register/business-register/business-register.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
@@ -18,8 +22,11 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
 <<<<<<< Updated upstream
   { path:'products',component:ListProductComponent},
+  { path:'categories',component:ListCategoryComponent},
   { path:'product/new',component:AddProductComponent},
+  { path:'category/new',component:AddCategoryComponent},
   { path:'product/edit/:id',component:EditProductComponent},
+  { path:'category/edit/:id',component:EditCategoryComponent},
 =======
   { path: 'register-businesss', component: BusinessRegisterComponent },
 >>>>>>> Stashed changes

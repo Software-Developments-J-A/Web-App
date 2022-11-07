@@ -11,6 +11,7 @@ export const environment = {
   basePathProducts:'http://localhost:8080/api/business/1/products',
   basePathUser:'http://localhost:8080/api/users',
   basePathBusiness:'http://localhost:8080/api/business',
+  basePathCategories:'http://localhost:8080/api/categories',
 
 >>>>>>> Stashed changes
 };

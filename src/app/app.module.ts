@@ -21,6 +21,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { BusinessRegisterComponent } from './components/register/business-register/business-register.component';
+import { CategoryComponent } from './components/category/category.component';
+import { ListCategoryComponent } from './components/list-category/list-category.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
+import { EditCategoryComponent } from './components/edit-category/edit-category.component';
 
 
 @NgModule({
@@ -41,7 +45,11 @@ import { BusinessRegisterComponent } from './components/register/business-regist
     DashboardComponent,
     SettingsComponent,
     ShopComponent,
-    BusinessRegisterComponent
+    BusinessRegisterComponent,
+    CategoryComponent,
+    ListCategoryComponent,
+    AddCategoryComponent,
+    EditCategoryComponent
   ],
   imports: [
     BrowserModule,
