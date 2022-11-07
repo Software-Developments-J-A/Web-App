@@ -16,14 +16,9 @@ export const navbarData=[
         label:'Mis Productos'
     },
     {
-        routeLink:'ventas',
-        icon:'point_of_sale',
-        label:'Ventas'
-    }, 
-    {
-        routeLink:'comentarios',
-        icon:'mail',
-        label:'Mensajes'
+        routeLink:'categories',
+        icon:'person',
+        label:'Categorias'
     },
     {
         routeLink:'settings',
