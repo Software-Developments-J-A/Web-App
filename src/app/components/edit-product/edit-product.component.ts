@@ -42,8 +42,11 @@ export class EditProductComponent implements OnInit {
       id: this.idProduct,
       title: this.myForm.get('title')!.value,
       brand: this.myForm.get('brand')!.value,
+      sku: this.myForm.get('brand')!.value,
       summary: this.myForm.get('summary')!.value,
       price: this.myForm.get('price')!.value,
+      quantity: this.myForm.get('price')!.value,
+      status: this.myForm.get('price')!.value,
     };
     this.productService.updateProduct(this.idProduct, product).subscribe({
       next: (data) => {

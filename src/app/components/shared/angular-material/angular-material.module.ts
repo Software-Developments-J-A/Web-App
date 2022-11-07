@@ -17,7 +17,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule} from '@angular/material/dialog';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -41,7 +41,7 @@ import { MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatPaginatorModule,
     MatDialogModule,
-
+    MatSlideToggleModule,
 
   ],
   exports:[
@@ -63,6 +63,7 @@ import { MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatPaginatorModule,
     MatDialogModule,
+    MatSlideToggleModule,
 
 
   ]

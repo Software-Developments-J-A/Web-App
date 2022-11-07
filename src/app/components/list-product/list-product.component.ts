@@ -11,12 +11,12 @@ import { MatTableDataSource } from '@angular/material/table';
 export class ListProductComponent implements OnInit {
 
   displayedColumns: string[] = [
-    'id',
-    'title',
     'brand',
-    'summary',
+    'name',
     'price',
-    'actions',
+    'quantity',
+    'status',
+    'actions'
   ];
 
   dataSource = new MatTableDataSource<Product>();

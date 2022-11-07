@@ -1,7 +1,10 @@
 export interface Product{
     id:number;
-    title:string;
     brand:string;
-    summary:string;
+    title:string;
+    sku:string;
     price:number;
+    quantity:number;
+    status:boolean;
+    summary:string;
 }

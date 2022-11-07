@@ -8,14 +8,15 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductService {
 
-  basePath:string= environment.basePath;
+  basePath:string= environment.basePathProducts;
 
   constructor(private http:HttpClient) { }
 
   getProducts(){
     return this.http.get<Product[]>(this.basePath);
-   }
-   getProductId(id: any) {
+  }
+
+  getProductId(id: any) {
     return this.http.get<Product>(`${this.basePath}/${id}`);
   }
 
