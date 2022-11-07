@@ -16,16 +16,17 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-<<<<<<< Updated upstream
   { path:'products',component:ListProductComponent},
   { path:'product/new',component:AddProductComponent},
   { path:'product/edit/:id',component:EditProductComponent},
-=======
   { path: 'register-businesss', component: BusinessRegisterComponent },
->>>>>>> Stashed changes
   { path: 'panel', component:PanelComponent ,
+  
       children:[
         { path: '', redirectTo:'dashboard', pathMatch: 'full' },
+        { path: 'products',component:ListProductComponent},
+        { path: 'products/new',component:AddProductComponent},
+        { path: 'products/edit/:id',component:EditProductComponent},
         { path: 'dashboard', component:DashboardComponent },
         { path: 'settings', component:SettingsComponent },
     ]

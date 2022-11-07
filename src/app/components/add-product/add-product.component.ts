@@ -39,9 +39,13 @@ export class AddProductComponent implements OnInit {
     const product: Product = {
       id: 0,
       title: this.myForm.get('title')!.value,
+      sku: this.myForm.get('brand')!.value,
       brand: this.myForm.get('brand')!.value,
       summary: this.myForm.get('summary')!.value,
       price: this.myForm.get('price')!.value,
+      quantity: this.myForm.get('price')!.value,
+      status: this.myForm.get('price')!.value,
+
     };
     this.productService.addProducts(product).subscribe({
       next: (data) => {
