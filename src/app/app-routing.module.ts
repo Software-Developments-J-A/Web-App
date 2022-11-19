@@ -1,6 +1,6 @@
-import { EditCategoryComponent } from './components/edit-category/edit-category.component';
-import { AddCategoryComponent } from './components/add-category/add-category.component';
-import { ListCategoryComponent } from './components/list-category/list-category.component';
+import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
+import { AddCategoryComponent } from './components/category/add-category/add-category.component';
+import { ListCategoryComponent } from './components/category/list-category/list-category.component';
 import { BusinessRegisterComponent } from './components/register/business-register/business-register.component';
 import { EditProductComponent } from './components/products/edit-product/edit-product.component';
 import { AddProductComponent } from './components/products/add-product/add-product.component';

@@ -19,11 +19,13 @@ import { BodyHeaderComponent } from './components/body-header/body-header.compon
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { ShopComponent } from './components/shop/shop.component';
 import { BusinessRegisterComponent } from './components/register/business-register/business-register.component';
-import { ListCategoryComponent } from './components/list-category/list-category.component';
-import { AddCategoryComponent } from './components/add-category/add-category.component';
-import { EditCategoryComponent } from './components/edit-category/edit-category.component';
+import { ListCategoryComponent } from './components/category/list-category/list-category.component';
+import { AddCategoryComponent } from './components/category/add-category/add-category.component';
+import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
+import { ShopComponent } from './components/shop/shop/shop.component';
+import { CheckoutComponent } from './components/shop/checkout/checkout.component';
+import { ThankPageComponent } from './components/shop/thank-page/thank-page.component';
 
 
 @NgModule({
@@ -43,11 +45,13 @@ import { EditCategoryComponent } from './components/edit-category/edit-category.
     SidenavComponent,
     DashboardComponent,
     SettingsComponent,
-    ShopComponent,
     BusinessRegisterComponent,
     ListCategoryComponent,
     AddCategoryComponent,
-    EditCategoryComponent
+    EditCategoryComponent,
+    ShopComponent,
+    CheckoutComponent,
+    ThankPageComponent
   ],
   imports: [
     BrowserModule,

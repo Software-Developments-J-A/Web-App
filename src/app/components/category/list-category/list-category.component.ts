@@ -1,5 +1,5 @@
-import { CategoryService } from './../../services/category.service';
-import { Category } from './../../models/category';
+import { CategoryService } from '../../../services/category.service';
+import { Category } from '../../../models/category';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 

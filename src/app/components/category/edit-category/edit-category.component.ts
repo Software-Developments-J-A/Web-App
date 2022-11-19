@@ -1,8 +1,8 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { CategoryService } from './../../services/category.service';
+import { CategoryService } from '../../../services/category.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Category } from './../../models/category';
+import { Category } from '../../../models/category';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
