@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register/register.component';
+import { ShopComponent } from './components/shop/shop/shop.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'register-business', component: BusinessRegisterComponent },
+  { path: 'shop/:name', component: ShopComponent },
   { path: 'panel', component:PanelComponent ,
       children:[
         { path: '', redirectTo:'dashboard', pathMatch: 'full' },

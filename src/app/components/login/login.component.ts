@@ -1,3 +1,4 @@
+import { BusinessService } from 'src/app/services/business.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
@@ -6,6 +7,7 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 import { environment } from 'src/environments/environment';
+import { Business } from 'src/app/models/business';
 
 @Component({
   selector: 'app-login',
@@ -17,12 +19,15 @@ export class LoginComponent implements OnInit {
   hide = true;
   basePath:string=environment.basePathUser;
   auth!: Boolean;
+  actualBusiness!:any;
+
 
   public loginForm!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder, 
     private userService: UserService,
+    private businessService: BusinessService,
     private http:HttpClient,
     private router:Router,
     private snackBar: MatSnackBar,
@@ -45,6 +50,10 @@ export class LoginComponent implements OnInit {
           if(a.email === this.loginForm.value.email && a.password === this.loginForm.value.password){
           this.auth=true;
           this.userService.setActualUser(a);
+          this.businessService.getBusinessByUserId(a.id).subscribe((data) => {
+            this.actualBusiness=data;
+            this.businessService.setActualBusiness(data);
+          });
         }
         return this.auth
       });
@@ -54,6 +63,7 @@ export class LoginComponent implements OnInit {
         });
         this.loginForm.reset();
         this.router.navigate(['panel']);
+        
       }else{
         this.snackBar.open('El usuario es Incorrecto', '', {
           duration: 3000,

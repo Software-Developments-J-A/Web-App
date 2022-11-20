@@ -19,7 +19,7 @@ export class BusinessService {
     return this.http.get<Business[]>(this.basePath)
   }
 
-  setActualBusiness(business:any){
+  setActualBusiness(business:Business){
     this.actualBusiness=business;
   }
 
@@ -30,6 +30,10 @@ export class BusinessService {
   getBusinessId(id:any){
     return this.http.get<Business>(`${this.basePath}/${id}`)
   }
+  getBusinessByUserId(id:any){
+    return this.http.get<Business>(`${this.basePath}/${id}`)
+  }
+  
   
   addBusiness(business: any){
     return this.http.post<Business>(
