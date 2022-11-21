@@ -10,21 +10,22 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register/register.component';
-import { ListProductComponent } from './components/list-product/list-product.component';
-import { AddProductComponent } from './components/add-product/add-product.component';
-import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { ListProductComponent } from './components/products/list-product/list-product.component';
+import { AddProductComponent } from './components/products/add-product/add-product.component';
+import { EditProductComponent } from './components/products/edit-product/edit-product.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { BodyComponent } from './components/body/body.component';
 import { BodyHeaderComponent } from './components/body-header/body-header.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { ShopComponent } from './components/shop/shop.component';
 import { BusinessRegisterComponent } from './components/register/business-register/business-register.component';
-import { CategoryComponent } from './components/category/category.component';
-import { ListCategoryComponent } from './components/list-category/list-category.component';
-import { AddCategoryComponent } from './components/add-category/add-category.component';
-import { EditCategoryComponent } from './components/edit-category/edit-category.component';
+import { ListCategoryComponent } from './components/category/list-category/list-category.component';
+import { AddCategoryComponent } from './components/category/add-category/add-category.component';
+import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
+import { ShopComponent } from './components/shop/shop/shop.component';
+import { CheckoutComponent } from './components/shop/checkout/checkout.component';
+import { ThankPageComponent } from './components/shop/thank-page/thank-page.component';
 
 
 @NgModule({
@@ -44,12 +45,13 @@ import { EditCategoryComponent } from './components/edit-category/edit-category.
     SidenavComponent,
     DashboardComponent,
     SettingsComponent,
-    ShopComponent,
     BusinessRegisterComponent,
-    CategoryComponent,
     ListCategoryComponent,
     AddCategoryComponent,
-    EditCategoryComponent
+    EditCategoryComponent,
+    ShopComponent,
+    CheckoutComponent,
+    ThankPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
-import { Category } from './../../models/category';
+import { Category } from '../../../models/category';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CategoryService } from './../../services/category.service';
+import { CategoryService } from '../../../services/category.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

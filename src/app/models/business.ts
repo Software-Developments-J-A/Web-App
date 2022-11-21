@@ -4,8 +4,8 @@ export interface Business{
     description: string;
     phone: string;
     email: string;
-    brand:any;
-    main_img?:any;
-    userId?:any;
+    brand: any;
+    main_img?: any;
+    userId?: any;
 }
   

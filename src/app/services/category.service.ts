@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CategoryService {
-  basePath:string= environment.basePath;
+  basePath:string= environment.basePathCategories;
 
   constructor(private http:HttpClient) { }
 

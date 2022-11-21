@@ -9,18 +9,22 @@ import { environment } from 'src/environments/environment';
 export class ProductService {
 
   basePath:string= environment.basePathProducts;
+  basePathShop:string= environment.basePathShop;
+
+
 
   constructor(private http:HttpClient) { }
 
-  getProducts(){
-    return this.http.get<Product[]>(this.basePath);
-  }
 
   getProductId(id: any) {
     return this.http.get<Product>(`${this.basePath}/${id}`);
   }
 
-  addProducts(product: Product) {
+  getProductsByShop(name:any){
+    return this.http.get<Product[]>(`${this.basePathShop}/${name}`);
+  }
+
+  addProducts(product: any) {
     return this.http.post<Product>(this.basePath, product);
   }
 

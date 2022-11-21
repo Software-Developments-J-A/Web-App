@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BusinessService } from 'src/app/services/business.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  actualBusinessName!: string;
+  
+  constructor(
+    private businessService:BusinessService
+  ) { }
 
   ngOnInit(): void {
+    this.actualBusinessName=this.businessService.getActualBusiness().name;
   }
 
+  
 }

@@ -1,5 +1,6 @@
-import { ProductService } from './../../services/product.service';
-import { Product } from './../../models/product';
+import { BusinessService } from 'src/app/services/business.service';
+import { ProductService } from './../../../services/product.service';
+import { Product } from './../../../models/product';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -23,15 +24,19 @@ export class ListProductComponent implements OnInit {
   dataSource = new MatTableDataSource<Product>();
 
   products!:Product[];
+  actualBusinessName!: string;
 
-  constructor(private productService:ProductService) { }
+  constructor(
+    private productService:ProductService,
+    private businessService:BusinessService
+    ) { }
 
   ngOnInit(): void {
     this.getProducts();
   }
 
   getProducts(){
-    this.productService.getProducts().subscribe((data:Product[])=>{
+    this.productService.getProductsByShop(this.businessService.getActualBusiness().name).subscribe((data:Product[])=>{
       this.dataSource=new MatTableDataSource(data);
     });
   }

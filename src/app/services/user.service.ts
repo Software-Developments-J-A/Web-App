@@ -21,7 +21,7 @@ export class UserService {
   }
 
 
-  setActualUser(user:any){
+  setActualUser(user:User){
     this.actualUser=user;
   }
 

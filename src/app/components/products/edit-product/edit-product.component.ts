@@ -1,6 +1,6 @@
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ProductService } from './../../services/product.service';
-import { Product } from './../../models/product';
+import { ProductService } from '../../../services/product.service';
+import { Product } from '../../../models/product';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
@@ -29,7 +29,7 @@ export class EditProductComponent implements OnInit {
     this.productService.getProductId(this.idProduct).subscribe((data) => {
       this.product = data;
       this.myForm = this.fb.group({
-        title: [this.product.title,[Validators.required]],
+        name: [this.product.name,[Validators.required]],
         brand: [this.product.brand, [Validators.required]],
         summary: [this.product.summary, [Validators.required]],
         price: [this.product.price, [Validators.required]],
@@ -40,9 +40,8 @@ export class EditProductComponent implements OnInit {
   updateProduct() {
     const product: Product = {
       id: this.idProduct,
-      title: this.myForm.get('title')!.value,
+      name: this.myForm.get('title=')!.value,
       brand: this.myForm.get('brand')!.value,
-      sku: this.myForm.get('brand')!.value,
       summary: this.myForm.get('summary')!.value,
       price: this.myForm.get('price')!.value,
       quantity: this.myForm.get('price')!.value,
