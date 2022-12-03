@@ -2,7 +2,7 @@
 <section class="login-section">
     <div class="login-form">
         <h1 class="font1">Continua Creciendo</h1>
-        <form [formGroup]="loginForm" (ngSubmit)="login()" class="formulario-inputs">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="formulario-inputs">
             <mat-form-field appearance="fill">
                 <mat-label class="font1">Email</mat-label>
                 <input formControlName="email" matInput>
@@ -19,7 +19,39 @@
             <button  class="font1" 
             style="background-color:#FFCD4E;
             color:black;padding-top: 13px; padding-bottom: 13px; font-size: 18px;"
-             mat-button mat-raised-button color="primary"><mat-icon class="icon-button">person</mat-icon>Ingresar</button>
+             mat-button mat-raised-button color="primary"><mat-icon class="icon-button">person</mat-icon>Ingresar</button>   
+        
+       <!--< <form (ngSubmit)="login()" class="formulario-inputs" #loginForm="ngForm">
+            <div appearance="fill">
+                <mat-label class="font1">Email</mat-label>
+                <input
+                required
+                name="email"
+                type="text"
+                placeholder="admin@upc.pe"
+                class="input"
+                [(ngModel)]="model.email"
+                #email="ngModel"
+              />
+            </div>
+
+            <div appearance="fill">
+                <mat-label class="font1">Password</mat-label>
+                <input formControlName="password" matInput [type]="hide ? 'password' : 'text'"
+                    required
+                    name="password"
+                    type="password"
+                    placeholder="123456"
+                    class="input"
+                    [(ngModel)]="model.password"
+                    #password="ngModel"
+                />
+
+            </div>       
+
+            <button class="button is-success">
+                Login
+            </button>-->
         </form>
     </div>
     <div class="img-login">

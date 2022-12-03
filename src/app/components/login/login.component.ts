@@ -1,13 +1,17 @@
-import { BusinessService } from 'src/app/services/business.service';
+import { User } from 'src/app/models/user';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { SessionUser } from './../../models/session-user';
+import { BusinessStorageService } from './../../services/business-storage.service';
+import { BusinessService } from 'src/app/services/business.service';
+import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 import { environment } from 'src/environments/environment';
 import { Business } from 'src/app/models/business';
+import { UserStorageService } from 'src/app/services/user-storage.service';
+import { Login } from 'src/app/models/login';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +19,6 @@ import { Business } from 'src/app/models/business';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   hide = true;
   basePath:string=environment.basePathUser;
   auth!: Boolean;
@@ -40,11 +43,58 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  /*public model: Login = new Login();
 
-  login(){
-   
+  hide = true;
+  basePath:string=environment.basePathUser;
+  auth!: Boolean;
+  actualBusiness!:any;
+  public invalid!: boolean;
+
+  public useractual:SessionUser;
+
+
+
+  constructor(
+    private userService: UserService,
+    private businessService: BusinessService,
+    private router:Router,
+    private snackBar: MatSnackBar,
+    private userStorageService: UserStorageService,
+    private businessStorageService: BusinessStorageService,
+
+    ){}
+  ngOnInit(): void {
+    this.useractual = this.userStorageService.user;
+  }
+
+
+  login(): void{
+
+   let self = this;
+    let selfbusiness = this;
+    this.userService.signIn(this.model).subscribe({
+      next(data: any) {
+        console.log(data);
+        self.userStorageService.set(data);
+        
+        self.router.navigate(['/panel/dashboard']);
+      },
+      error() {
+        self.invalid = true;
+      },
+    });
+
     
-    this.http.get<User[]>(`${this.basePath}`)
+    this.businessService.getBusinessByUserId(this.useractual.id).subscribe({
+      next(data:any){
+        selfbusiness.businessStorageService.set(data);
+      }
+    });
+    
+    */
+  login(){
+   this.http.get<User[]>(`${this.basePath}`)
     .subscribe(res=>{
       const user=res.find((a:User)=>{
           if(a.email === this.loginForm.value.email && a.password === this.loginForm.value.password){
@@ -54,6 +104,7 @@ export class LoginComponent implements OnInit {
             this.actualBusiness=data;
             this.businessService.setActualBusiness(data);
           });
+          console.log(this.businessService.getActualBusiness());
         }
         return this.auth
       });
@@ -75,6 +126,6 @@ export class LoginComponent implements OnInit {
       });
     })
 
-  }
+  };
 
 }

@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   basePathShop:'http://localhost:8080/api/shop',
-
+  basePathOrders:'http://localhost:8080/api/orders',
+  base_url: 'http://localhost:8081/api',
   basePathProducts:'http://localhost:8080/api/products',
   basePathUser:'http://localhost:8080/api/users',
   basePathBusiness:'http://localhost:8080/api/business',

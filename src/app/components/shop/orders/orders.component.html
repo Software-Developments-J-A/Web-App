@@ -1,0 +1,71 @@
+<div class="container">
+    mat-card>
+    <h2 class="alinear">Registro de Consulta</h2>
+    <div class="Product-car" *ngFor="let cat of products">
+        <h3>{{cat.name}}</h3>
+        <mat-form-field>
+          <input matInput type="number" placeholder="{{cat.price}}" [(ngModel)]="price">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="number" [(ngModel)]="quantity">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addDetail()">
+          Agregar detalle
+        </button>
+    </div>
+
+    
+   <!-- <div class="consult-container">
+      <div>
+        <mat-form-field>
+          <mat-label>Productos</mat-label>
+          <mat-select formControlName="category">
+            <mat-option *ngFor="let cat of products" [value]="cat.id">
+              {{ cat.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field>
+        <input matInput placeholder="Diagonsis" [(ngModel)]="quantity" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Diagonsis" [(ngModel)]="price" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Diagonsis" [(ngModel)]="price" />
+      </mat-form-field>-->
+  
+      <mat-expansion-panel *ngFor="let det of details; let i = index">
+        <mat-expansion-panel-header>
+          <mat-panel-title> {{ i + 1 }} {{ det.quantity }} </mat-panel-title>
+          <mat-panel-description> Items</mat-panel-description>
+        </mat-expansion-panel-header>
+  
+  
+        <button mat-raised-button color="warn" (click)="removeDetail(i)">
+          Eliminar
+        </button>
+      </mat-expansion-panel>
+  
+  
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        style="margin-left: 10 px"
+        (click)="saveOrder()"
+      >
+        Aceptar
+      </button>
+      <button
+        mat-raised-button
+        color="warn"
+        type="button"
+        routerLink="/admin/consult"
+      >
+        Cancelar
+      </button>
+</div>

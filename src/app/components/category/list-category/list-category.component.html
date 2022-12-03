@@ -2,7 +2,16 @@
     <div class="col-lg-6"style="text-align:center">
       <h2>List Categories</h2>
     </div>
+    
     <div class="col-lg-6" style="text-align: right">
+      <button
+            mat-button
+            mat-raised-button
+            color="accent"
+            (click)="exportExcel()"
+          >
+            Exportar Excel
+          </button>
       <button mat-raised-button color="warn" routerLink="/panel/category/new"
       >New Category</button>
     </div>

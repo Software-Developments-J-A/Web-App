@@ -14,7 +14,9 @@ export class ProductService {
 
 
   constructor(private http:HttpClient) { }
-
+  getProducts() {
+    return this.http.get<Product[]>(`${this.basePath}`);
+  }
 
   getProductId(id: any) {
     return this.http.get<Product>(`${this.basePath}/${id}`);
@@ -25,7 +27,7 @@ export class ProductService {
   }
 
   addProducts(product: any) {
-    return this.http.post<Product>(this.basePath, product);
+    return this.http.post<Product[]>(this.basePath, product);
   }
 
   updateProduct(id: any, product: Product) {
@@ -34,5 +36,12 @@ export class ProductService {
 
   deleteProduct(id: any) {
     return this.http.delete<Product>(`${this.basePath}/${id}`);
+  }
+
+  exportProduct(){
+    const endpoint = `${this.basePath}/export/excel`;
+    return this.http.get(endpoint, {
+      responseType: 'blob',
+    });
   }
 }

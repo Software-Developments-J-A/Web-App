@@ -1,3 +1,4 @@
+import { SimpleSnackBar, MatSnackBarRef, MatSnackBar } from '@angular/material/snack-bar';
 import { CategoryService } from '../../../services/category.service';
 import { Category } from '../../../models/category';
 import { MatTableDataSource } from '@angular/material/table';
@@ -19,10 +20,19 @@ export class ListCategoryComponent implements OnInit {
 
   categories!:Category[];
 
-  constructor(private categoryService:CategoryService) { }
+  constructor(private categoryService:CategoryService,private snackBar: MatSnackBar
+    ) { }
 
   ngOnInit(): void {
     this.getCategories();
+  }
+  openSnackBar(
+    message: string,
+    action: string
+  ): MatSnackBarRef<SimpleSnackBar> {
+    return this.snackBar.open(message, action, {
+      duration: 2000,
+    });
   }
 
   getCategories(){
@@ -38,5 +48,23 @@ export class ListCategoryComponent implements OnInit {
       });
     });
   }
+  exportExcel(){
+    this.categoryService.exportCategory().subscribe(
+      (data: any) => {
+        let file = new Blob([data], {
+          type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        });
+        let fileUrl = URL.createObjectURL(file);
+        var anchor = document.createElement('a');
+        anchor.download = 'Categories.xlsx';
+        anchor.href = fileUrl;
+        anchor.click();
 
+        this.openSnackBar('Archivo exportado correctamente', 'Exitosa');
+      },
+      (error: any) => {
+        this.openSnackBar('No se pudo exportar el archivo', 'Error');
+      }
+    );
+  }
 }

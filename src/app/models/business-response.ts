@@ -1,4 +1,4 @@
-export class Business{
+export class BusinessResponse {
     id: number;
     name: string;
     description: string;
@@ -6,6 +6,5 @@ export class Business{
     email: string;
     brand: any;
     main_img?: any;
-    userId?: any;
 }
   

@@ -1,3 +1,4 @@
+import { BusinessResponse } from './../models/business-response';
 import { Business } from 'src/app/models/business';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -9,9 +10,10 @@ import { environment } from 'src/environments/environment';
 })
 export class BusinessService {
 
+  business:Business;
   basePath:string=environment.basePathBusiness;
 
-  actualBusiness!:Business;
+  actualBusiness!:BusinessResponse;
 
   constructor(private http: HttpClient) { }
 
@@ -30,10 +32,16 @@ export class BusinessService {
   getBusinessId(id:any){
     return this.http.get<Business>(`${this.basePath}/${id}`)
   }
+
+  /*getBusinessByUserId(id:any):any{
+
+
+    return this.http.post(`${this.basePath}/${id}`,this.actualBusiness);
+  }*/
+
   getBusinessByUserId(id:any){
     return this.http.get<Business>(`${this.basePath}/${id}`)
   }
-  
   
   addBusiness(business: any){
     return this.http.post<Business>(

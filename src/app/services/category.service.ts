@@ -29,5 +29,11 @@ export class CategoryService {
   deleteCategory(id: any) {
     return this.http.delete<Category>(`${this.basePath}/${id}`);
   }
+  exportCategory(){
+    const endpoint = `${this.basePath}/export/excel`;
+    return this.http.get(endpoint, {
+      responseType: 'blob',
+    });
+  }
 
 }

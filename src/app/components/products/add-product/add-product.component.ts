@@ -17,6 +17,7 @@ export class AddProductComponent implements OnInit {
   categories: Category[] = [];
   selectedFile: any;
   myForm!: FormGroup;
+  nameImg: string = '';
 
   constructor(
     private fb: FormBuilder,
@@ -40,7 +41,6 @@ export class AddProductComponent implements OnInit {
       price: ['', [Validators.required]],
       quantity: ['', [Validators.required]],
       category: ['', Validators.required],
-
     });
   }
 
@@ -55,12 +55,18 @@ export class AddProductComponent implements OnInit {
       }
     );
   }
+  onFileChanged(event: any) {
+    this.selectedFile = event.target.files[0];
+    console.log(this.selectedFile);
+
+    this.nameImg = event.target.files[0].name;
+  }
   saveProduct(): void {
 
     const product: Product = {
       id: 0,
       name: this.myForm.get('name')!.value,
-      brand: this.myForm.get('brand')!.value,
+      brand: this.selectedFile,
       summary: this.myForm.get('summary')!.value,
       price: this.myForm.get('price')!.value,
       quantity: this.myForm.get('quantity')!.value,

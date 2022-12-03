@@ -1,0 +1,14 @@
+.consult-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .consult-container > * {
+    width: 100%;
+  }
+  
+  .alinear {
+    text-align: center;
+    margin-top: 20px;
+  }
+  

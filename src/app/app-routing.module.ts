@@ -1,3 +1,4 @@
+import { OrdersComponent } from './components/shop/orders/orders.component';
 import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
 import { AddCategoryComponent } from './components/category/add-category/add-category.component';
 import { ListCategoryComponent } from './components/category/list-category/list-category.component';
@@ -32,6 +33,8 @@ const routes: Routes = [
         { path: 'category/new',component:AddCategoryComponent},
         { path: 'category/edit/:id',component:EditCategoryComponent},
         { path: 'dashboard', component:DashboardComponent },
+        { path: 'pedidos', component:OrdersComponent },
+
         { path: 'settings', component:SettingsComponent },
     ]
   }

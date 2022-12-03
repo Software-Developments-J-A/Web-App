@@ -26,7 +26,9 @@ import { EditCategoryComponent } from './components/category/edit-category/edit-
 import { ShopComponent } from './components/shop/shop/shop.component';
 import { CheckoutComponent } from './components/shop/checkout/checkout.component';
 import { ThankPageComponent } from './components/shop/thank-page/thank-page.component';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { OrdersComponent } from './components/shop/orders/orders.component';
 
 @NgModule({
 
@@ -51,7 +53,8 @@ import { ThankPageComponent } from './components/shop/thank-page/thank-page.comp
     EditCategoryComponent,
     ShopComponent,
     CheckoutComponent,
-    ThankPageComponent
+    ThankPageComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,9 @@ import { ThankPageComponent } from './components/shop/thank-page/thank-page.comp
     BrowserAnimationsModule,
     AngularMaterialModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
