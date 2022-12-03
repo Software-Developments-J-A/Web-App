@@ -20,6 +20,7 @@ export class ListProductComponent implements OnInit {
     'price',
     'quantity',
     'status',
+    'category',
     'actions'
   ];
 
